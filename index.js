@@ -1,8 +1,9 @@
 // TODO: Include packages needed for this application
 // included 'inquirer' package for prompts, page-Template, and Generate Markdown to build to site/README
 const inquirer = require('inquirer');
-const generatePage = require('./src/page-template');
-const {} = require('./Develop/utils/generateMarkdown');
+const fs = require("fs");
+const generateMarkdown = require('./utils/generateMarkdown');
+
 
 // TODO: Create an array of questions for user input
 // Initial question asks for project title and does not proceed unless one is entered.
@@ -10,7 +11,7 @@ const questions = () => {
     return inquirer.prompt([
         {
           type: 'input'
-          name: 'title'
+          name: 'projectName'
           message: 'What is the title of your project? (required)',
           validate: projectTitle => {
             if (projectTitle) {

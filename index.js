@@ -2,7 +2,7 @@
 // included 'inquirer' package for prompts, page-Template, and Generate Markdown to build to site/README
 const inquirer = require('inquirer');
 const generatePage = require('./src/page-template');
-const {} = require('./utils/generateMarkdown');
+const {} = require('./Develop/utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 // Initial question asks for project title and does not proceed unless one is entered.

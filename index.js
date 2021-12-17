@@ -58,7 +58,7 @@ const questions = () => {
 // Fifth question asks for project contribution guidance and does not proceed unless it is provided.
         {
             type: 'input'
-            name: 'contGuidelines'
+            name: 'contribGuidelines'
             message: 'Enter the Projects Contribution Guidelines (required)',
             validate: guidelines => {
               if (guidelines) {

@@ -1,6 +1,12 @@
-module.exports = readmeTemplate => {
-    // destructure page data by section
-    const { projects, about, ...header } = readmeTemplate;
+//CREATE DYTNAMIC Sections here:
+
+
+
+
+
+//using module.exports to export the function so it may generate the README page.
+module.exports = readmeTemplate => { 
+    const {, } = readmeTemplate;
     return `
 
     <!DOCTYPE html>
@@ -14,7 +20,16 @@ module.exports = readmeTemplate => {
     </head> 
 
     <body>
+        <header>
+        </header>
 
+
+        <main>
+        </main>
+
+
+        <footer>
+        </footer>
     </body>
     </html>
     `;

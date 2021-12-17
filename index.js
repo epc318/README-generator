@@ -10,8 +10,8 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = () => {
     return inquirer.prompt([
         {
-          type: 'input'
-          name: 'projectName'
+          type: 'input',
+          name: 'projectName',
           message: 'What is the title of your project? (required)',
           validate: projectTitle => {
             if (projectTitle) {
@@ -21,11 +21,11 @@ const questions = () => {
               return false;
             }
           }  
-        }
-// Second question asks for project description and also does not proceed unless one is entered.
+        },
+// This question asks for project description and also does not proceed unless one is entered.
         {
-            type: 'input'
-            name: 'description'
+            type: 'input',
+            name: 'description',
             message: 'Enter a Project Description (required)',
             validate: projectDescription => {
               if (projectDescription) {
@@ -35,47 +35,54 @@ const questions = () => {
                 return false;
               }
             }  
-        }
-// Third question asks for project install instructions if there are any.
+        },
+// This question asks for project install instructions if there are any.
         {
-            type: 'input'
-            name: 'installInstructions'
-            message: 'Enter the related installation instructions if appllicable', 
-        }
-// Fourth question asks for project user information and does not proceed unless it is provided.
+            type: 'input',
+            name: 'installInstructions',
+            message: 'Provide installation and setup instructions necessary to run the application',
+            validate: install => {
+              if (install) {
+                return true;
+              } else {
+                console.log('Please provide setup/installation instructions!');
+                return false;
+              }
+            }  
+        },
+// This question asks for project usage information and does not proceed unless it is provided.
         {
-            type: 'input'
-            name: 'usageInfo'
-            message: 'Enter the Projects Usage Information (required)',
+            type: 'input',
+            name: 'usageInfo',
+            message: 'Please indicate how to use this application',
             validate: usage => {
               if (usage) {
                 return true;
               } else {
-                console.log('Please enter the User Information!');
+                console.log('Please enter usage (how-to) information!');
                 return false;
               }
             }  
-        }
-// Fifth question asks for project contribution guidance and does not proceed unless it is provided.
+        },
+// This question asks for project contribution guidance and does not proceed unless it is provided.
         {
-            type: 'input'
-            name: 'contribGuidelines'
-            message: 'Enter the Projects Contribution Guidelines (required)',
+            type: 'input',
+            name: 'contribGuidelines',
+            message: 'Enter the Projects Contribution Guidelines',
             validate: guidelines => {
               if (guidelines) {
                 return true;
               } else {
-                console.log('Please enter Contribution Guidelines!');
+                console.log('Please enter contribution guidelines, even if no contributions are being accepted!');
                 return false;
               }
             }  
-        }
-// Sixth question asks for project test instructions and does not proceed unless it is provided.
-
+        },
+// This question asks for project test instructions and does not proceed unless it is provided.
         {
-            type: 'input'
-            name: 'testInstructions'
-            message: 'Enter some project test instructions  (required)',
+            type: 'input',
+            name: 'testInstructions',
+            message: 'Enter some project tests accompanied instructions.',
             validate: Instructions => {
               if (Instructions) {
                 return true;
@@ -84,10 +91,56 @@ const questions = () => {
                 return false;
               }
             }  
-        }
+        },
+// This question asks if the user wants a license badge included on their README.
+        {
+            type: 'confirm',
+            name: 'licensePresent',
+            message: 'Would you like to add badge indicating the projects license usage?',
+            default: false
+        },
+// This question provides the user with a list of licenses to choose from.
+        {
+            type: 'list',
+            name: 'licenseType',
+            message: 'Please choose a license to apply',
+            choices: ['Apache 2.0', 'MPL 2.0', 'Boost 1.0', 'MIT', 'GNU GPL 3.0', 'Affero GPL 3.0'],
+            when: ({licensePresent}) => {
+              if(licensePresent) {
+                return true;
+              } else{
+                return false;
+              }            
+            }
+        },   
+// The next questions simply ask the user for some contact information.
+        {
+            type: 'input',
+            name: 'githubName',
+            message: 'What is your Github username?',
+            validate: (github) => {
+              if(github) {
+                return true;
+              } else{
+                console.log('Please enter your Github username!');
+                return false;
+              }            
+            }
+        },
+        {
+          type: 'input',
+          name: 'email',
+          message: 'What is your current email address?',
+          validate: (emailAddress) => {
+            if(emailAddress) {
+              return true;
+            } else{
+              console.log('Please enter your email address!');
+              return false;
+            }            
+          }
+      },
     ])
-
-
 };
 
 // TODO: Create a function to write README file

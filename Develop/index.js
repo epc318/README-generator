@@ -1,4 +1,5 @@
 // TODO: Include packages needed for this application
+// included 'inquirer' package for prompts, page-Template, and Generate Markdown to build to site/README
 const inquirer = require('inquirer');
 const generatePage = require('./src/page-template');
 const {} = require('./utils/generateMarkdown');

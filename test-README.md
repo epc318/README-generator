@@ -22,7 +22,7 @@ Sample Usage TextSample Usage TextSample Usage TextSample Usage TextSample Usage
 Sample Install Text Sample Install Text Sample Install Text Sample Install Text Sample Install Text Sample Install Text Sample Install Text Sample Install Text Sample Install Text 
 
 ## License
-This project is licensed with Affero GPL 3.0.
+This project is licensed with Boost 1.0.
   
 
 ## Testing
@@ -32,4 +32,4 @@ node run test node run test
 Guidlines Here Guidelines here
 
 ## Questions?
-If you have any questions, comments, or concerns with this project, please don't hesitate to contct me through github [Github Profile] (https://github.com/epc318) or my email [Email Address] carl4917@umn.edu.
+If you have any questions, comments, or concerns with this project, please don't hesitate to contct me through github [Github Profile](https://github.com/epc318) or my email [Email Address](carl4917@umn.edu).

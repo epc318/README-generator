@@ -163,9 +163,11 @@ function writeToFile(data) {
 // TODO: Create a function to initialize app
 function init(){
   questions()
+  //passes question answers to generateMarkdown.js to make the README
     .then(markdownData => {
       return generateMarkdown(markdownData);
     })
+// passes md to then statement to create HTML page from the markdown/READ me data    
     .then(pageHTML => {
       return writeToFile(pageHTML);
     })

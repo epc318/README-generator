@@ -39,7 +39,7 @@ This project is licensed with ${data.licenseType}.
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
-#${data.projectName}
+# ${data.projectName}
 
 ## Project Description
 ${data.description}
@@ -69,7 +69,7 @@ ${data.testInstructions}
 ${data.contribGuidelines}
 
 ## Questions?
-If you have any questions, comments, or concerns with this project, please don't hesitate to contct me through github [Github Profile](https://github.com/${data.githubName}) or my email [Email Address](${data.email}).
+If you have any questions, comments, or concerns with this project, please don't hesitate to contct me through [Github](https://github.com/${data.githubName}) or my [Email](${data.email}).
 `;
 }
 

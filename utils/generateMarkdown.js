@@ -10,6 +10,9 @@ function renderLicenseBadge(data) {
 }
 
 
+
+
+
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 //I couldn't figure this out so I have it returning a google search of the license name and version
@@ -17,9 +20,6 @@ function renderLicenseLink(data) {
   if(!data.licensePresent) {
     return `(https://google.com/${data.licenseType})`;
   }
-
-
-
 }
 
 

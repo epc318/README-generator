@@ -144,7 +144,21 @@ const questions = () => {
 };
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(data) {
+  return new promises((resolve, reject) => {
+    fs.writeFile('./README.md', data , err => {
+      if (err) {
+        reject (err);
+        return;
+      }
+// if everything was accepted the promise is resovled and a message send indicating file creation     
+      resolve({
+        ok: true,
+        message: 'File Successfully Created!'
+      });
+    });
+  });
+};
 
 // TODO: Create a function to initialize app
 function init() {}

@@ -18,7 +18,7 @@
 <p>This application can be used to efficiently create a high level README.md file for nearly anmy purpose or project.</p>
 
 ## Contribution
-<p>This app was created by Evan Carlson ([Github:epc318](https://github.com/epc318))<p>
+This app was created by Evan Carlson ([Github:epc318](https://github.com/epc318))
 
 ## Questions?
-<p>If you have any questions, comments, or concerns with this project, please don't hesitate to contct me through github [Github Profile](https://github.com/epc318) or my email [Email Address](carl4917@umn.edu).<p>
+If you have any questions, comments, or concerns with this project, please don't hesitate to contct me through github [Github Profile](https://github.com/epc318) or my email [Email Address](carl4917@umn.edu).<

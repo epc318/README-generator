@@ -166,6 +166,10 @@ function init(){
     .then(markdownData => {
       return generateMarkdown(markdownData);
     })
+    .then(pageHTML => {
+      return writeToFile(pageHTML);
+    })
+};    
 
 
 // Function call to initialize app

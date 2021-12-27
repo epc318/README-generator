@@ -145,7 +145,7 @@ const questions = () => {
 
 // TODO: Create a function to write README file
 function writeToFile(data) {
-  return new promises((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     fs.writeFile('./README.md', data , err => {
       if (err) {
         reject (err);
@@ -161,7 +161,12 @@ function writeToFile(data) {
 };
 
 // TODO: Create a function to initialize app
-function init() {}
+function init(){
+  questions()
+    .then(markdownData => {
+      return generateMarkdown(markdownData);
+    })
+
 
 // Function call to initialize app
 init();

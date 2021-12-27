@@ -12,7 +12,7 @@
 
 ## Installation
 <p>Node.js as well as the inquirer.js package is necesary to run this application. Copy the files or simply clone the repository. Navigate to the repository via git bash and run
-<code> node index.js <code> from the the root of the directory.</p>
+<code> node index.js </code> from the the root of the directory.</p>
 
 ## Usage
 <p>This application can be used to efficiently create a high level README.md file for nearly anmy purpose or project.</p>
